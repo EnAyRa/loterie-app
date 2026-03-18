@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loterie - Connexion</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        .container { display: flex; justify-content: center; gap: 50px; }
+        form { display: flex; flex-direction: column; gap: 10px; width: 300px; padding: 20px; border: 1px solid #ccc; border-radius: 10px; }
+        input, button { padding: 10px; font-size: 16px; }
+        button { cursor: pointer; background-color: #28a745; color: white; border: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+    <h1>Bienvenue sur la Loterie aux gains infinis ! 🎰</h1>
+
+    <div class="container">
+        <form action="/register" method="POST">
+            <h2>Créer un compte</h2>
+            <input type="text" name="username" placeholder="Ton pseudo" required>
+            <input type="email" name="email" placeholder="Ton adresse email" required>
+            <input type="password" name="password" placeholder="Mot de passe" required>
+            <label>
+                <input type="checkbox" name="notifyByEmail"> M'avertir par mail si je gagne
+            </label>
+            <button type="submit">S'inscrire</button>
+        </form>
+
+        <form action="/login" method="POST">
+            <h2>Se connecter</h2>
+            <input type="email" name="email" placeholder="Ton adresse email" required>
+            <input type="password" name="password" placeholder="Mot de passe" required>
+            <button type="submit">Connexion</button>
+            <br>
+            <a href="/auth/google" style="text-decoration: none; background: #4285F4; color: white; padding: 10px; border-radius: 5px; display: block;">Se connecter avec Google</a>
+        </form>
+    </div>
+
+</body>
+</html>

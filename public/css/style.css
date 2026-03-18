@@ -131,3 +131,78 @@ body {
     .balance-amount { font-size: 1.8rem; }
     .card { padding: 15px; }
 }
+/* Styles spécifiques à la page de Login */
+.auth-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.auth-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 20px;
+    width: 320px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.auth-card h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+.auth-card input[type="text"],
+.auth-card input[type="email"],
+.auth-card input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #0f172a;
+    color: white;
+    box-sizing: border-box; /* Important pour que ça ne dépasse pas */
+}
+
+.btn-google {
+    background: white;
+    color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn-google:hover {
+    background: #eee;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    margin: 15px 0;
+    color: #ccc;
+    cursor: pointer;
+}

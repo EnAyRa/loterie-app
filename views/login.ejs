@@ -3,40 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loterie - Connexion</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        .container { display: flex; justify-content: center; gap: 50px; }
-        form { display: flex; flex-direction: column; gap: 10px; width: 300px; padding: 20px; border: 1px solid #ccc; border-radius: 10px; }
-        input, button { padding: 10px; font-size: 16px; }
-        button { cursor: pointer; background-color: #28a745; color: white; border: none; border-radius: 5px; }
-    </style>
+    <title>Bienvenue - Loterie Royale 👑</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
-    <h1>Bienvenue sur la Loterie aux gains infinis ! 🎰</h1>
+    <header class="header">
+        <h1>LOTERIE ROYALE 👑</h1>
+        <p>Tentez votre chance avec vos jetons gratuits !</p>
+    </header>
 
     <div class="container">
-        <form action="/register" method="POST">
-            <h2>Créer un compte</h2>
-            <input type="text" name="username" placeholder="Ton pseudo" required>
-            <input type="email" name="email" placeholder="Ton adresse email" required>
-            <input type="password" name="password" placeholder="Mot de passe" required>
-            <label>
-                <input type="checkbox" name="notifyByEmail"> M'avertir par mail si je gagne
-            </label>
-            <button type="submit">S'inscrire</button>
-        </form>
+        <div class="auth-container">
+            
+            <div class="auth-card">
+                <h2>Créer un compte</h2>
+                <form action="/register" method="POST">
+                    <div class="input-group">
+                        <input type="text" name="username" placeholder="Pseudo" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" name="password" placeholder="Mot de passe" required>
+                    </div>
+                    <label class="checkbox-group">
+                        <input type="checkbox" name="notifyByEmail"> M'avertir par mail en cas de gain
+                    </label>
+                    <button type="submit" class="btn-play">S'INSCRIRE</button>
+                </form>
+            </div>
 
-        <form action="/login" method="POST">
-            <h2>Se connecter</h2>
-            <input type="email" name="email" placeholder="Ton adresse email" required>
-            <input type="password" name="password" placeholder="Mot de passe" required>
-            <button type="submit">Connexion</button>
-            <br>
-            <a href="/auth/google" style="text-decoration: none; background: #4285F4; color: white; padding: 10px; border-radius: 5px; display: block;">Se connecter avec Google</a>
-        </form>
+            <div class="auth-card">
+                <h2>Se connecter</h2>
+                <form action="/login" method="POST">
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" name="password" placeholder="Mot de passe" required>
+                    </div>
+                    <button type="submit" class="btn-play">CONNEXION</button>
+                </form>
+
+                <div style="margin: 20px 0; color: #666;">OU</div>
+
+                <a href="/auth/google" class="btn-google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_Wait_Logo.svg" alt="Google" width="20">
+                    Continuer avec Google
+                </a>
+            </div>
+
+        </div>
     </div>
+
+    <footer style="margin-top: 50px; color: #444; font-size: 0.8rem;">
+        &copy; 2026 Loterie Royale - Jeu gratuit uniquement
+    </footer>
 
 </body>
 </html>

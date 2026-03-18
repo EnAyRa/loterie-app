@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,60 +9,73 @@
     <link rel="stylesheet" href="/css/style.css">
     <script src="/socket.io/socket.io.js"></script>
 </head>
+<footer class="footer-legal">
+    <p>
+        &copy; 2026 <b>Loterie Royale</b>. Tous droits réservés.<br>
+        Toute reproduction, représentation, modification ou exploitation, totale ou partielle, de ce site web ou de son contenu,<br>
+        par quelque procédé que ce soit, sans l'autorisation expresse et préalable de l'auteur est strictement interdite.<br>
+        Ce site est une plateforme de simulation de jeu à but récréatif. L'argent utilisé est fictif.
+    </p>
+</footer>
 <body>
 
     <div id="annonce-gagnant"></div>
 
     <header class="header">
         <h1>LOTERIE ROYALE 👑</h1>
-        <p>Bienvenue, <strong><%= user.username %></strong></p>
+        <p>Bienvenue, <strong>
+                <%= user.username %>
+            </strong></p>
         <div class="balance-card">
-            <div class="balance-amount"><span id="solde"><%= user.balance.toLocaleString() %></span> $</div>
+            <div class="balance-amount"><span id="solde">
+                    <%= user.balance.toLocaleString() %>
+                </span> $</div>
         </div>
     </header>
 
     <div class="container">
-        <% if (typeof message !== 'undefined') { %>
-            <div style="background: rgba(255,255,255,0.1); padding: 10px; border-radius: 10px; margin: 10px 0; border-left: 5px solid var(--primary);">
+        <% if (typeof message !=='undefined' ) { %>
+            <div
+                style="background: rgba(255,255,255,0.1); padding: 10px; border-radius: 10px; margin: 10px 0; border-left: 5px solid var(--primary);">
                 <%= message %>
             </div>
-        <% } %>
+            <% } %>
 
-        <div class="loteries-grid">
-            <div class="card">
-                <h3>⚡ EXPRESS</h3>
-                <p>Tirage toutes les 5 min</p>
-                <div class="timer" id="timer-5min">00:00</div>
-                <form action="/participer" method="POST">
-                    <input type="hidden" name="lotteryType" value="5min">
-                    <button type="submit" class="btn-play">PARTICIPER (500$)</button>
-                </form>
-            </div>
+                <div class="loteries-grid">
+                    <div class="card">
+                        <h3>⚡ EXPRESS</h3>
+                        <p>Tirage toutes les 5 min</p>
+                        <div class="timer" id="timer-5min">00:00</div>
+                        <form action="/participer" method="POST">
+                            <input type="hidden" name="lotteryType" value="5min">
+                            <button type="submit" class="btn-play">PARTICIPER (500$)</button>
+                        </form>
+                    </div>
 
-            <div class="card">
-                <h3>⏳ HORAIRE</h3>
-                <p>Tirage chaque heure</p>
-                <div class="timer" id="timer-1h">00:00</div>
-                <form action="/participer" method="POST">
-                    <input type="hidden" name="lotteryType" value="1h">
-                    <button type="submit" class="btn-play">PARTICIPER (500$)</button>
-                </form>
-            </div>
+                    <div class="card">
+                        <h3>⏳ HORAIRE</h3>
+                        <p>Tirage chaque heure</p>
+                        <div class="timer" id="timer-1h">00:00</div>
+                        <form action="/participer" method="POST">
+                            <input type="hidden" name="lotteryType" value="1h">
+                            <button type="submit" class="btn-play">PARTICIPER (500$)</button>
+                        </form>
+                    </div>
 
-            <div class="card">
-                <h3>📅 QUOTIDIEN</h3>
-                <p>Tirage à minuit</p>
-                <div class="timer" id="timer-1j">00:00</div>
-                <form action="/participer" method="POST">
-                    <input type="hidden" name="lotteryType" value="1j">
-                    <button type="submit" class="btn-play">PARTICIPER (500$)</button>
-                </form>
-            </div>
-        </div>
+                    <div class="card">
+                        <h3>📅 QUOTIDIEN</h3>
+                        <p>Tirage à minuit</p>
+                        <div class="timer" id="timer-1j">00:00</div>
+                        <form action="/participer" method="POST">
+                            <input type="hidden" name="lotteryType" value="1j">
+                            <button type="submit" class="btn-play">PARTICIPER (500$)</button>
+                        </form>
+                    </div>
+                </div>
 
-        <div style="text-align: center; margin-top: 50px;">
-            <a href="/logout" style="color: #666; text-decoration: none;">Se déconnecter</a>
-        </div>
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="/logout" style="color: #666; text-decoration: none;">Se déconnecter</a>
+                </div>
     </div>
 
     <script>
@@ -75,7 +89,7 @@
 
         function updateTimers() {
             const now = new Date();
-            
+
             // On calcule les temps restants (simplifié pour l'exemple)
             const format = (ms) => {
                 let s = Math.floor(ms / 1000);
@@ -104,4 +118,5 @@
         updateTimers();
     </script>
 </body>
+
 </html>

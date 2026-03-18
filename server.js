@@ -1,3 +1,11 @@
+/* * -------------------------------------------------------------------------
+ * PROPRIÉTÉ INTELLECTUELLE - LOTERIE ROYALE
+ * -------------------------------------------------------------------------
+ * Ce code source et l'ensemble des éléments graphiques sont la propriété 
+ * exclusive de l'auteur. Toute copie ou utilisation non autorisée du code
+ * fera l'objet de poursuites conformément au Code de la propriété intellectuelle.
+ * -------------------------------------------------------------------------
+ */
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');

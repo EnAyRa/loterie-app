@@ -1,7 +1,10 @@
 :root {
-    --primary: #ffcc00; /* Or */
-    --secondary: #1a1a2e; /* Bleu très foncé */
-    --accent: #e94560; /* Rose néon */
+    --primary: #ffcc00;
+    /* Or */
+    --secondary: #1a1a2e;
+    /* Bleu très foncé */
+    --accent: #e94560;
+    /* Rose néon */
     --text: #ffffff;
     --card-bg: #16213e;
 }
@@ -30,7 +33,7 @@ body {
     padding: 30px 0;
     text-align: center;
     border-bottom: 3px solid var(--primary);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .balance-card {
@@ -63,14 +66,14 @@ body {
     padding: 25px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
     border-color: var(--primary);
 }
 
@@ -85,7 +88,7 @@ body {
     font-size: 1.8rem;
     color: var(--accent);
     margin: 15px 0;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     padding: 10px;
     border-radius: 10px;
 }
@@ -128,9 +131,15 @@ body {
 
 /* Adaptation Mobile */
 @media (max-width: 600px) {
-    .balance-amount { font-size: 1.8rem; }
-    .card { padding: 15px; }
+    .balance-amount {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        padding: 15px;
+    }
 }
+
 /* Styles spécifiques à la page de Login */
 .auth-container {
     display: flex;
@@ -146,7 +155,7 @@ body {
     border-radius: 20px;
     width: 320px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .auth-card h2 {
@@ -175,7 +184,8 @@ body {
     border: 1px solid #333;
     background: #0f172a;
     color: white;
-    box-sizing: border-box; /* Important pour que ça ne dépasse pas */
+    box-sizing: border-box;
+    /* Important pour que ça ne dépasse pas */
 }
 
 .btn-google {
@@ -205,4 +215,18 @@ body {
     margin: 15px 0;
     color: #ccc;
     cursor: pointer;
+}
+.footer-legal {
+    margin-top: 60px;
+    padding: 30px 10px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.75rem;
+    color: #555; /* Couleur sombre pour le sérieux */
+    line-height: 1.6;
+}
+
+.footer-legal b {
+    color: #888;
 }

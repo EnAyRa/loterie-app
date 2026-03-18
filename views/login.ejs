@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
 </head>
+<footer class="footer-legal">
+    <p>
+        &copy; 2026 <b>Loterie Royale</b>. Tous droits réservés.<br>
+        Toute reproduction, représentation, modification ou exploitation, totale ou partielle, de ce site web ou de son contenu,<br>
+        par quelque procédé que ce soit, sans l'autorisation expresse et préalable de l'auteur est strictement interdite.<br>
+        Ce site est une plateforme de simulation de jeu à but récréatif. L'argent utilisé est fictif.
+    </p>
+</footer>
 <body>
 
     <header class="header">
@@ -16,7 +25,7 @@
 
     <div class="container">
         <div class="auth-container">
-            
+
             <div class="auth-card">
                 <h2>Créer un compte</h2>
                 <form action="/register" method="POST">
@@ -50,9 +59,11 @@
 
                 <div style="margin: 20px 0; color: #666;">OU</div>
 
-                <a href="/auth/google" class="btn-google">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_Wait_Logo.svg" alt="Google" width="20">
-                    Continuer avec Google
+                    <a href="/auth/google" class="btn-google">
+                        <img src="https://developers.google.com/static/identity/images/g-logo.png" alt="Google"
+                            width="20">
+                        Continuer avec Google
+                    </a>
                 </a>
             </div>
 
@@ -64,4 +75,5 @@
     </footer>
 
 </body>
+
 </html>
